@@ -8,21 +8,27 @@
     <title>JS Chat App</title>
 </head>
 <body>
-    <div class="container">
-            <ul>
-                <li>
-                    <p class="message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae debitis, doloremque enim illo ipsa necessitatibus nisi obcaecati quae saepe voluptate?</p>
-                    <h3 class="username">Username</h3>
-                    <p class="delete">X</p>
-                    <p class="edit">Edit</p>
-                </li>
-            </ul>
-        <form action="">
-            <textarea name="message" id="message" cols="30" rows="10"></textarea>
-            <input type="text" name="username" id="username">
-            <button disabled>Chat!</button>
-        </form>
-        <script src="scripts/main.js"></script>
-    </div>
+<div class="container">
+    <ul id="user-input">
+    </ul>
+    <form action="" method="POST">
+        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+        <input type="text" name="username" id="username">
+        <button disabled>Chat!</button>
+    </form>
+    <script src="scripts/main.js"></script>
+</div>
+
+<script id="create-message" type="text/x-handlebars-template">
+    {{#each todos}}
+    <li>
+        <p class="message">{{this.text}}</p>
+        <h3 class="username">{{this.username}}</h3>
+        <p class="delete">X</p>
+        <p class="edit">Edit</p>
+    </li>
+    {{/each}}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
 </body>
 </html>
