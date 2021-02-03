@@ -12,15 +12,15 @@
     <ul id="user-input">
     </ul>
     <form action="" method="POST">
-        <textarea name="message" id="message" cols="30" rows="10"></textarea>
-        <input type="text" name="username" id="username">
-        <button disabled>Chat!</button>
+        <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+        <input type="text" name="username" id="username" required>
+        <button type="submit">Chat!</button>
     </form>
     <script src="scripts/main.js"></script>
 </div>
 
 <script id="create-message" type="text/x-handlebars-template">
-    {{#each todos}}
+    {{#each chats}}
     <li>
         <p class="message">{{this.text}}</p>
         <h3 class="username">{{this.username}}</h3>
