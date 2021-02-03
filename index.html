@@ -21,10 +21,10 @@
 
 <script id="create-message" type="text/x-handlebars-template">
     {{#each chats}}
-    <li>
+    <li class="list-item">
         <p class="message">{{this.text}}</p>
         <h3 class="username">{{this.username}}</h3>
-        <p class="delete">X</p>
+        <button class="delete" value={{this.id}}>X</button>
         <p class="edit">Edit</p>
     </li>
     {{/each}}
