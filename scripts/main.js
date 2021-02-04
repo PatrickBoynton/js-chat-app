@@ -64,13 +64,13 @@
                     }
                     return response.json();
                 })
-                .then(data => console.log(data))
+                .then(data => console.log(data.reverse()))
                 .catch(error => console.log("Error:", error));
         });
         setInterval(() => {
             fetch(BASE_URL)
             .then(response => response.json())
-            .then(data => generateHTML(data.sort()))
+            .then(data => generateHTML(data.reverse()))
             .catch(error => console.log(error));
         }, 3000);
     }
