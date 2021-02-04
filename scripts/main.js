@@ -68,11 +68,16 @@
                 .catch(error => console.log("Error:", error));
             e.preventDefault();
         });
+        fetchData(BASE_URL, generateHTML);
         setInterval(() => {
-            fetch(BASE_URL)
-            .then(response => response.json())
-            .then(data => generateHTML(data.reverse()))
-            .catch(error => console.log(error));
+            fetchData(BASE_URL, generateHTML);
         }, 3000);
+
+        function fetchData(BASE_URL, generateHTML) {
+            fetch(BASE_URL)
+                .then(response => response.json())
+                .then(data => generateHTML(data.reverse()))
+                .catch(error => console.log(error));
+        }
     }
 )();
