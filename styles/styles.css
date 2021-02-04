@@ -52,3 +52,7 @@ button:hover{
 input, textarea:focus {
     outline: none;
 }
+.delete:hover{
+    background-color: red;
+    color: white;
+}
