@@ -10,7 +10,7 @@
         const generateHTML = (data) => {
             const source = document.querySelector("#create-message").innerHTML;
             const template = Handlebars.compile(source);
-            const context = {chats: data.sort()};
+            const context = {chats: data.reverse()};
             const html = template(context);
             console.log(context);
             document.querySelector("#user-input").innerHTML = html;
