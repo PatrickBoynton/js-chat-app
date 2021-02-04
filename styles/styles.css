@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    color: white;
+}
+.container{
+    text-align: center;
+}
+ul{
+    height: 400px;
+    overflow: auto;
+}
+li{
+    list-style: none;
+    margin: 15px;
+}
+form{
+    display: flex;
+    width: 40%;
+    margin: 0 auto;
+    flex-direction: column;
+}
+input{
+    margin: 5px 0;
+}
