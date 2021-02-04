@@ -49,3 +49,6 @@ button:hover{
     color: #000;
     background-color: #7171FF;
 }
+input, textarea:focus {
+    outline: none;
+}
