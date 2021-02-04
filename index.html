@@ -8,17 +8,16 @@
     <title>JS Chat App</title>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
-<body >
+<body>
 <div class="container">
-    <ul  id="user-input">
-    </ul>
     <p>The list scrolls.</p>
     <form action="" method="POST">
-        <textarea  name="message" id="message" cols="30" rows="10" required></textarea>
-        <input  type="text" name="username" id="username" required>
-        <button  type="submit">Chat!</button>
+        <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+        <input type="text" name="username" id="username" required>
+        <button type="submit">Chat!</button>
     </form>
-    <script src="scripts/main.js"></script>
+    <ul id="user-input">
+    </ul>
 </div>
 
 <script id="create-message" type="text/x-handlebars-template">
@@ -32,5 +31,6 @@
     {{/each}}
 </script>
 <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+<script src="scripts/main.js"></script>
 </body>
 </html>
