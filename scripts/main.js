@@ -66,6 +66,7 @@
                 })
                 .then(data => console.log(data.reverse()))
                 .catch(error => console.log("Error:", error));
+            e.preventDefault();
         });
         setInterval(() => {
             fetch(BASE_URL)
